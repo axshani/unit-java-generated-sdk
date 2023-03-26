@@ -48,6 +48,20 @@ public class GetListApplicationsApiTest {
         String sort = null;
         UnitResponseListApplications response = api.findListApplication(page, filter, sort);
 
+        public void findListApplicationTest() throws Exception {
+        ListPageParametersObject page = null;
+        Filter filter = null;
+        String sort = null;
+
+        GetListApplicationsApi listApi = new GetListApplicationsApi();
+        String access_token = ""
+        ApiClient cl = new ApiClient();
+        cl.setAccessToken(access_token);
+        Configuration.setDefaultApiClient(cl);
+
+        GetListApplicationsApi api = new GetListApplicationsApi();
+
+        UnitResponseListApplications response = api.findListApplication(null, null, null);
         // TODO: test validations
     }
 }
